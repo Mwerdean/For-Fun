@@ -1,7 +1,7 @@
 .header-left {
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px 5px 20px;
+    padding: 10px 0px 5px 20px;
     
     > * {
         margin-left: 40px        
@@ -69,9 +69,7 @@ li > ul > li a:hover {
         }
     }
 
-    > * {
-        margin-left: 20px;
-    }
+
 }
 
 @keyframes menu {
@@ -109,7 +107,7 @@ nav {
     color: black;
     background-color: white;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    z-index: 10;
+    z-index: 12;
     a {
         color: black;        
     }
@@ -127,6 +125,7 @@ nav {
     height: 50px;
     width: 70px;
     margin-top: 5px;
+    margin-left: -50px;
 }
 
 .navNoShow {

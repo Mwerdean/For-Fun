@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
-<<<<<<< HEAD
 import gif from '../assets/namegif2.gif'
-=======
 import ReactDOM from 'react-dom'
 
->>>>>>> 8fde2a4f7a8b2d690a5031852cd0a25d1d8b719f
 export default class Hero extends Component {
     constructor(props) {
         super(props),
@@ -13,7 +10,6 @@ export default class Hero extends Component {
             transform2: (0, 0),
             menuShow: false
         }
-        this.myRef = React.createRef()
     }
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll)
@@ -48,24 +44,6 @@ export default class Hero extends Component {
             <div className = "layer3"></div>
             <div className = "layer4"></div>
         </header>
-<<<<<<< HEAD
-        <section className = "content">
-=======
-
-        <section ref = {this.myRef} className = "content">
->>>>>>> 8fde2a4f7a8b2d690a5031852cd0a25d1d8b719f
-            <article>
-                <h1>Matthew Werdean</h1>
-            <div className = "name-gif" style = {{transform: `translate(0, ${this.state.transform})`}}>
-            <img src = {gif} className="imggif"></img>
-            </div>
-                <hr />
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </article>
-        </section>
-        <div style={{height: 2000}}></div>
       </div>
     )
   }

@@ -6,7 +6,6 @@ export default class Header extends Component {
         this.state = {
             menuShow: false
         }
-        this.myRef = React.createRef()
     }
 
     componentDidMount() {
@@ -27,10 +26,10 @@ export default class Header extends Component {
   render() {
     return (
       <div>
-        <nav>
-            <div className="header-left" className={`navNoShow ${this.state.menuShow ? 'navShow' : ''}`}>
+        <nav className={`navNoShow ${this.state.menuShow ? 'navShow' : ''}`}>
+            <div className="header-left">
                 <ul className="header-show">
-                    <li>First
+                    <li>Projects
                         <ul className="header-has-children">
                             <li><a>Item 1</a></li>
                             <li><a>Item 1</a></li>
@@ -43,9 +42,9 @@ export default class Header extends Component {
                 <ul className="header-show twentpx"></ul>
             </div>
             <img src="https://s3-us-west-1.amazonaws.com/thene/mw1.jpg" alt="logo" className="header-logo" />
-            <div className= {`header-right navNoShow ${this.state.menuShow ? 'navShow' : ''}`}>
-                <a>About</a>
-                <a>Third</a>
+            <div className= "header-right">
+                <a>Social</a>
+                <a>Contact</a>
             </div>
         </nav>
       </div>
