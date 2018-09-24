@@ -179,6 +179,17 @@ figure.effect-sadie:hover p {
     transition: all 3s ease-out
 }
 
+.translateR-enter {
+    opacity: 0;
+    transform: translateX(200px);
+}
+
+.translateR-enter.translateR-enter-active {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: all 3s ease-out
+}
+
 .NoTranslate {
     opacity: 0;
 }

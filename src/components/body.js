@@ -9,6 +9,12 @@ const Translate = ({ children, ...props }) => (
     </CSSTransition>
 )
 
+const TranslateR = ({ children, ...props }) => (
+    <CSSTransition  {...props} timeout={6000} classNames="translateR">
+        {children}
+    </CSSTransition>
+)
+
 export default class Body extends Component {
     constructor(props) {
         super(props),
@@ -26,9 +32,9 @@ export default class Body extends Component {
     }
 
     handleScroll = (event) => {
-        if(event.path[1].scrollY >= 800) {
+        if(event.path[1].scrollY >= 500) {
             this.setState({ show: true })
-        } else {
+        } else if(event.path[1].scrollY <=100){
             this.setState({ show: false })
         }
     }
@@ -43,6 +49,20 @@ export default class Body extends Component {
                     <h1>Matthew Werdean</h1>
                     <hr />
                     <p>
+                        <div className={`NoTranslate ${this.state.show ? 'ShowTranslate' : ''}`}>
+                            <Translate in={this.state.show} >
+                                    <div>
+                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                    </div>
+                            </Translate>
+                        </div>
+                        <div className={`NoTranslate ${this.state.show ? 'ShowTranslate' : ''}`}>
+                            <TranslateR in={this.state.show} >
+                                    <div>
+                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                    </div>
+                            </TranslateR>
+                        </div>
                         <div className={`NoTranslate ${this.state.show ? 'ShowTranslate' : ''}`}>
                             <Translate in={this.state.show} >
                                     <div>
