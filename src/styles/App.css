@@ -36,8 +36,7 @@ li > ul > li a:hover {
     background-color: white; }
     .header-show > li:hover > ul {
       display: flex;
-      flex-direction: column;
-      perspective: 1000px; }
+      flex-direction: column; }
       .header-show > li:hover > ul > li {
         opacity: 0; }
         .header-show > li:hover > ul > li:nth-child(1) {
@@ -589,6 +588,19 @@ figure.effect-sadie:hover p {
 
 .ShowTranslate {
   opacity: 1; }
+
+.movebr-styles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; }
+
+.movebr-mouse-style {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%; }
 
 body {
   margin: 0;

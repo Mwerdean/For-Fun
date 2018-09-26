@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import gif from '../assets/namegif2.gif'
-import ReactDOM from 'react-dom'
 
 export default class Hero extends Component {
     constructor(props) {
