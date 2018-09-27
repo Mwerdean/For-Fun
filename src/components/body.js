@@ -110,7 +110,6 @@ export default class Body extends Component {
                     </figcaption>
                 </figure>
             </div>
-        <div style={{height: 2000}}></div>
       </div>
     )
   }
