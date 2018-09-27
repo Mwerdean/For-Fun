@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import gif from '../assets/namegif2.gif'
 
+
+
 export default class Hero extends Component {
     constructor(props) {
         super(props),
@@ -20,7 +22,7 @@ export default class Hero extends Component {
     handleScroll = (event) => {
         let scrollTop = event.path[1].scrollY,
         itemTranslate = ( scrollTop/2 + 'px');
-        if(event.path[1].scrollY >= 1000) {
+        if(event.path[1].scrollY >= 800) {
             this.setState({ menuShow: true })
         }
         console.log(scrollTop)
@@ -35,7 +37,7 @@ export default class Hero extends Component {
       <div>
 
         <header className = "hero-box">
-            <div className = "name" style = {{transform: `translate(0, ${this.state.transform})`}}></div>
+            <div className = {`name ${this.state.menuShow ? 'hero-logo-show' : ''}`} style = {{transform: `translate(0, ${this.state.transform})`}}></div>
             <div className = "fore-bird" style = {{transform: `translate(${this.state.transform}, -${this.state.transform})`}}></div>
             <div className = "back-bird" style = {{transform: `translate(${this.state.transform2}, -${this.state.transform2})`}}></div>
             <div className = "layer1"></div>

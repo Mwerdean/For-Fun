@@ -345,16 +345,33 @@ img {
   left: 13%; }
 
 .name {
-  height: 200px;
+  height: 250px;
   width: 100%;
-  background-image: url(../assets/name2.png);
+  background-image: url(https://s3-us-west-1.amazonaws.com/thene/mw1.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 40%;
+  background-size: 15%;
   position: absolute;
   top: 50%;
   margin-top: -200px;
   z-index: 9; }
+
+.fade-appear {
+  opacity: 0; }
+
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity 300ms linear; }
+
+.fade-exit {
+  opacity: 1; }
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transform: opacity 300ms linear; }
+
+.fade-exit-done {
+  opacity: 0; }
 
 .fore-bird {
   width: 360px;
@@ -601,6 +618,147 @@ figure.effect-sadie:hover p {
   justify-content: center;
   width: 100%;
   height: 100%; }
+
+.transition-box {
+  position: relative; }
+
+.transition-box-entered {
+  color: red; }
+
+.transition-box-entering {
+  animation-name: example;
+  animation-duration: 4s; }
+
+@keyframes example {
+  0% {
+    color: red;
+    left: 0px;
+    top: 0px; }
+  25% {
+    color: yellow;
+    left: 200px;
+    top: 0px; }
+  50% {
+    color: blue;
+    left: 200px;
+    top: 200px; }
+  75% {
+    color: green;
+    left: 0px;
+    top: 200px; }
+  100% {
+    color: red;
+    left: 0px;
+    top: 0px; } }
+
+.reveal-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  background-color: #8ce2ea;
+  flex-direction: column; }
+
+.bottom-line {
+  border-bottom-style: solid;
+  border-bottom-color: white;
+  border-bottom-width: 1px;
+  height: 1px;
+  width: 0%;
+  animation-name: bottom-line;
+  animation-delay: 2s;
+  animation-iteration-count: 1;
+  animation-duration: 800ms;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+
+@keyframes bottom-line {
+  0% {
+    width: 0%; }
+  100% {
+    width: 50%; } }
+
+.reveal-text1,
+.reveal-text1::after {
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-duration: 800ms;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+
+.reveal-text1 {
+  position: relative;
+  font-size: 5vw;
+  display: block;
+  user-select: none;
+  animation-name: reveal-text;
+  color: #fff;
+  white-space: nowrap;
+  cursor: default;
+  margin: 5px;
+  letter-spacing: 4px; }
+  .reveal-text1::after {
+    content: "";
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f2f98b;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    pointer-events: none;
+    animation-name: revealer-text; }
+
+.reveal-text2,
+.reveal-text2::after {
+  animation-delay: 1.5s;
+  animation-iteration-count: 1;
+  animation-duration: 800ms;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+
+.reveal-text2 {
+  position: relative;
+  font-size: 3vw;
+  display: block;
+  user-select: none;
+  animation-name: reveal-text;
+  color: #fff;
+  white-space: nowrap;
+  cursor: default;
+  margin: 5px;
+  letter-spacing: 4px; }
+  .reveal-text2::after {
+    content: "";
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f2f98b;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    pointer-events: none;
+    animation-name: revealer-text; }
+
+@keyframes reveal-text {
+  from {
+    clip-path: inset(0 100% 0 0); }
+  to {
+    clip-path: inset(0 0 0 0); } }
+
+@keyframes revealer-text {
+  0%, 50% {
+    transform-origin: 0 50%; }
+  60%, 100% {
+    transform-origin: 100% 50%; }
+  60% {
+    transform: scaleX(1); }
+  100% {
+    transform: scaleX(0); } }
 
 body {
   margin: 0;

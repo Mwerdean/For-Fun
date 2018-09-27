@@ -39,18 +39,40 @@ img {
 }
 
 .name {
-    height: 200px;
+    height: 250px;
     width: 100%;
-    background-image: url(../assets/name2.png);
+    background-image: url(https://s3-us-west-1.amazonaws.com/thene/mw1.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 40%;
+    background-size: 15%;
     position: absolute;
     top: 50%;
     margin-top: -200px;
     z-index: 9;
+    
 }
 
+.fade-appear {
+    opacity: 0;
+}
+
+.fade-appear.fade-appear-active {
+    opacity: 1;
+    transition: opacity 300ms linear;
+}
+
+.fade-exit {
+    opacity: 1
+}
+
+.fade-exit.fade-exit-active {
+    opacity: 0;
+    transform: opacity 300ms linear;
+}
+
+.fade-exit-done {
+    opacity: 0;
+}
 .fore-bird {
     width: 360px;
     height: 300px;
