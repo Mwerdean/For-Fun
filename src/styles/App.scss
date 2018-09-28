@@ -15,3 +15,24 @@ body {
   }
 }
 
+.padding {
+  padding-top: 50vh;  
+}
+
+.allContent {
+  position: absolute;
+  background-color: #222;
+}
+
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+ 
+::-webkit-scrollbar-track {
+  background: #ddd;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #666; 
+}

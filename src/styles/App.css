@@ -619,56 +619,26 @@ figure.effect-sadie:hover p {
   width: 100%;
   height: 100%; }
 
-.transition-box {
-  position: relative; }
-
-.transition-box-entered {
-  color: red; }
-
-.transition-box-entering {
-  animation-name: example;
-  animation-duration: 4s; }
-
-@keyframes example {
-  0% {
-    color: red;
-    left: 0px;
-    top: 0px; }
-  25% {
-    color: yellow;
-    left: 200px;
-    top: 0px; }
-  50% {
-    color: blue;
-    left: 200px;
-    top: 200px; }
-  75% {
-    color: green;
-    left: 0px;
-    top: 200px; }
-  100% {
-    color: red;
-    left: 0px;
-    top: 0px; } }
-
 .reveal-body {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
   height: 50vh;
-  background-color: #8ce2ea;
+  background: linear-gradient(0deg, transparent, #0a0a0a), url(../assets/footer_lodyas.png);
+  background: webkit-linear-gradient(bottom, transparent, #0a0a0a);
   flex-direction: column; }
 
 .bottom-line {
   border-bottom-style: solid;
-  border-bottom-color: white;
+  border-bottom-color: #c4ac6f;
   border-bottom-width: 1px;
   height: 1px;
   width: 0%;
   animation-name: bottom-line;
-  animation-delay: 2s;
+  animation-delay: 2.5s;
   animation-iteration-count: 1;
-  animation-duration: 800ms;
+  animation-duration: 2000ms;
   animation-fill-mode: both;
   animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
 
@@ -692,7 +662,7 @@ figure.effect-sadie:hover p {
   display: block;
   user-select: none;
   animation-name: reveal-text;
-  color: #fff;
+  color: #c4ac6f;
   white-space: nowrap;
   cursor: default;
   margin: 5px;
@@ -705,7 +675,7 @@ figure.effect-sadie:hover p {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #f2f98b;
+    background-color: white;
     transform: scaleX(0);
     transform-origin: 0 50%;
     pointer-events: none;
@@ -725,7 +695,7 @@ figure.effect-sadie:hover p {
   display: block;
   user-select: none;
   animation-name: reveal-text;
-  color: #fff;
+  color: #c4ac6f;
   white-space: nowrap;
   cursor: default;
   margin: 5px;
@@ -738,7 +708,7 @@ figure.effect-sadie:hover p {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #f2f98b;
+    background-color: white;
     transform: scaleX(0);
     transform-origin: 0 50%;
     pointer-events: none;
@@ -760,9 +730,67 @@ figure.effect-sadie:hover p {
   100% {
     transform: scaleX(0); } }
 
+.arrow {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform-origin: 50% 50%;
+  transform: translate3d(-50%, -50%, 0); }
+
+.arrow-first {
+  animation: arrow-movement 2s 4s ease-in-out infinite; }
+
+.arrow-second {
+  animation: arrow-movement 2s 5s ease-in-out infinite; }
+
+.arrow:before,
+.arrow:after {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px; }
+
+.arrow:before {
+  transform: rotate(45deg) translateX(-23%);
+  transform-origin: top left; }
+
+.arrow:after {
+  transform: rotate(-45deg) translateX(23%);
+  transform-origin: top right; }
+
+@keyframes arrow-movement {
+  0% {
+    opacity: 0;
+    top: 40%; }
+  70% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif; }
   body input, body textarea, body select {
     font-family: 'Montserrat', sans-serif; }
+
+.padding {
+  padding-top: 50vh; }
+
+.allContent {
+  position: absolute;
+  background-color: #222; }
+
+::-webkit-scrollbar {
+  width: 6px; }
+
+::-webkit-scrollbar-track {
+  background: #ddd; }
+
+::-webkit-scrollbar-thumb {
+  background: #666; }

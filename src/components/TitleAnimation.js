@@ -9,6 +9,8 @@ export default class TitleAnimation extends Component {
                 <div className="bottom-line"></div>
                 <div className="reveal-text2">Web Developer &#9675; Designer</div>
             </body>
+                <div class="arrow arrow-first"></div>
+                <div class="arrow arrow-second"></div>
         </div>
     )
   }
